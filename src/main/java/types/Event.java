@@ -1,34 +1,50 @@
 package types;
 
-import java.time.ZonedDateTime;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBRangeKey;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
 
+@DynamoDBTable(tableName = "events")
 public class Event {
-    private ZonedDateTime zonedDateTime;
-    private String description;
-    private String location;
-    private String id;
+    private String eventId;
+    private String eventDescription;
+    private String eventLocation;
+    private String dateTime;
 
-    public ZonedDateTime getZonedDateTime() {
-        return zonedDateTime;
+    @DynamoDBHashKey(attributeName = "event_id")
+    public String getEventId() {
+        return eventId;
     }
 
-    public void setZonedDateTime(ZonedDateTime zonedDateTime) {
-        this.zonedDateTime = zonedDateTime;
+    public void setEventId(String eventId) {
+        this.eventId = eventId;
     }
 
-    public String getDescription() {
-        return description;
+    @DynamoDBRangeKey(attributeName = "date_time")
+    public String getDateTime() {
+        return dateTime;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDateTime(String dateTime) {
+        this.dateTime = dateTime;
     }
 
-    public String getLocation() {
-        return location;
+    @DynamoDBAttribute(attributeName = "event_description")
+    public String getEventDescription() {
+        return eventDescription;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    public void setEventDescription(String eventDescription) {
+        this.eventDescription = eventDescription;
+    }
+
+    @DynamoDBAttribute(attributeName = "event_location")
+    public String getEventLocation() {
+        return eventLocation;
+    }
+
+    public void setEventLocation(String eventLocation) {
+        this.eventLocation = eventLocation;
     }
 }
