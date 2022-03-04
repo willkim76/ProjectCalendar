@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="utilities.CalendarUtilityTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2022-03-03T02:26:19" hostname="DESKTOP-78SPBBI" time="0.046">
+  <properties/>
+  <testcase name="isValidCyLocalDateTime_validStringFutureTime_returnsLocalDateTime()" classname="utilities.CalendarUtilityTest" time="0.041"/>
+  <testcase name="isValidFutureLocalDateTime_validStringInvalidDateTime_returnsNull()" classname="utilities.CalendarUtilityTest" time="0.002"/>
+  <testcase name="isValidFutureLocalDateTime_nullIsPassedIn_returnsNull()" classname="utilities.CalendarUtilityTest" time="0.001"/>
+  <testcase name="isValidCyLocalDateTime_validStringCurrentDateTime_returnsNull()" classname="utilities.CalendarUtilityTest" time="0.0"/>
+  <testcase name="isValidFutureLocalDateTime_validStringFutureDate_returnsLocalDateTime()" classname="utilities.CalendarUtilityTest" time="0.001"/>
+  <testcase name="isValidFutureLocalDateTime_invalidStringToParse_returnsNull()" classname="utilities.CalendarUtilityTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

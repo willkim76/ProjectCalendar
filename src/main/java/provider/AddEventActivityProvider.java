@@ -2,10 +2,11 @@ package provider;
 
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
-import data.AddEventRequest;
+import data.requests.AddEventRequest;
 import data.results.AddEventResult;
-import dependencies.Services;
 import dependencies.DaggerServices;
+import dependencies.Services;
+
 
 public class AddEventActivityProvider implements RequestHandler<AddEventRequest, AddEventResult> {
     private Services services;
